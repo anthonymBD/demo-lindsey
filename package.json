@@ -1,7 +1,6 @@
 {
   "name": "lindseyblog",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,5 +21,14 @@
   "devDependencies": {
     "gulp-sass": "^5.1.0",
     "sass": "^1.49.9"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthonymBD/demo-lindsey.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anthonymBD/demo-lindsey/issues"
+  },
+  "homepage": "https://github.com/anthonymBD/demo-lindsey#readme",
+  "description": ""
 }
