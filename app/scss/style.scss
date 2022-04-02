@@ -9,9 +9,15 @@ $slate: #333334;
 $lBlue: #e9f9ff;
 
 $breakpoints: (
-  "small": 767px,
-  "medium": 992px,
-  "large": 1200px,
+  "small": (
+    max-width: 767px,
+  ),
+  "medium": (
+    max-width: 992px,
+  ),
+  "large": (
+    max-width: 1245px,
+  ),
 ) !default;
 
 @mixin system {
@@ -89,8 +95,7 @@ p {
   background: none;
   padding: 0.8rem 1.5rem;
 }
-
-.whiteOutline {
+.whiteoutline {
   border: 1px solid white;
   background: none;
   padding: 0.8rem 1.5rem;
@@ -129,7 +134,7 @@ header {
   color: $slate;
   margin: 1rem;
 }
-
+/* hero */
 #jumbo {
   background-color: $snow;
   height: 80vh;
@@ -142,6 +147,7 @@ header {
     height: 118%;
     object-fit: cover;
     width: 91%;
+    object-position: top;
   }
   .grid-right {
     align-self: center;
@@ -151,6 +157,10 @@ header {
     padding-bottom: 1rem;
   }
 }
+.mobile-photo {
+  display: none;
+}
+/* second section */
 
 #story {
   background-color: $lBlue;
@@ -182,6 +192,8 @@ header {
   width: 350px;
   object-fit: cover;
 }
+
+/* lookbook section section 3 */
 
 .portfolio {
   button {
@@ -238,22 +250,6 @@ header {
   padding: 1rem;
 }
 
-#share {
-  background-image: url("/img/cherry.jpg");
-  background-size: cover;
-  object-fit: cover;
-
-  .rounded-circle {
-    height: 40px;
-    width: 40px;
-  }
-  span {
-    color: white;
-    font-family: $serif;
-    font-weight: 500;
-  }
-}
-
 .beauty.tips {
   list-style: none;
   margin: 3rem 0 3rem 0;
@@ -277,19 +273,88 @@ header {
   font-size: 25px;
 }
 
-#moments {
-  background-color: $lBlue;
-  padding: 2rem 0;
-}
+/* end profilo css */
 
-footer {
-  background-color: $snow;
-  a {
-    text-decoration: none;
+/*start shared section*/
+
+#share {
+  background-image: url("/img/cherry.jpg");
+  background-size: cover;
+  object-fit: cover;
+
+  .rounded-circle {
+    height: 40px;
+    width: 40px;
+  }
+  span {
+    color: white;
+    font-family: $serif;
+    font-weight: 500;
   }
 }
 
-@media (min-width: 992px) {
-  .portfolio-modal .portfolio-modal-title {
+#moments {
+  background-color: $lBlue;
+  padding: 3rem 0;
+}
+
+@include respond-to("large") {
+  #jumbo {
+    height: 100%;
+    .text {
+      margin: 6rem 0 1rem 0;
+    }
+
+    .heroImg img {
+      height: 108%;
+    }
+  }
+  #story {
+    height: 560px;
+    .grid-left {
+      margin-top: -5rem;
+    }
+    .flip {
+      top: 1rem;
+    }
+  }
+}
+
+@include respond-to("medium") {
+  .r1 {
+    font-size: 2rem;
+    line-height: 2.8rem;
+    padding-bottom: 1rem;
+  }
+  .r2 {
+    font-size: 1rem;
+  }
+
+  #jumbo .pink {
+    padding-bottom: 0.5rem;
+  }
+
+  .small {
+    font-size: 1.2rem;
+  }
+}
+@include respond-to("small") {
+  #jumbo {
+    grid-template-columns: 1fr;
+  }
+  .heroImg {
+    display: none;
+  }
+  .mobile-photo {
+    display: block;
+  }
+
+  #story {
+    display: block;
+    height: 600px;
+
+    .filp {
+      height: 300px;
+    }
   }
 }

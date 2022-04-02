@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"script.js"}
+{"version":3,"sources":["script.js"],"names":["tl","gsap","timeline","fromTo","x","opacity","delay","duration","height","ease"],"mappings":"AAAA,IAAIA,GAAKC,KAAKC,WACdF,GAAGG,OACD,YACA,CACEC,GAAI,IACJC,QAAS,GAEX,CACED,EAAG,EACHC,QAAS,EACTC,MAAO,GACPC,SAAU,IAEZJ,OACA,WACA,CACEK,OAAQ,GAEV,CACEA,OAAQ,OACRD,SAAU,IACVE,KAAM,gBAER","file":"script.js"}
