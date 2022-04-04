@@ -18,6 +18,9 @@ $breakpoints: (
   "large": (
     max-width: 1245px,
   ),
+  "medium-l": (
+    max-width: 1440px,
+  ),
 ) !default;
 
 @mixin system {
@@ -317,6 +320,14 @@ header {
     .flip {
       top: 1rem;
     }
+  }
+}
+
+@include respond-to("medium-l") {
+  #jumbo {
+    height: 100vh;
+    align-self: end;
+    padding: 2rem;
   }
 }
 
