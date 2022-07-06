@@ -94,9 +94,12 @@ width:50px;
     width: 80%;
 }
 
-.layers li {display:flex;
-margin: 2rem 12%;
-max-width: 480px;
+
+
+.layers {
+    display: flex;
+    flex-direction: row;
+    margin: auto 5rem;
 }
 
 .mobile-h1{
@@ -129,6 +132,7 @@ max-width: 480px;
 
     .grid-two {
     align-self: start;
+    text-align: center;
 
 }
 .withscroll p {margin:0 3rem;
